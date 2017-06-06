@@ -286,9 +286,9 @@ export default class MultiSlider extends React.Component {
       borderRadius: borderRadius || 0,
     };
 
-    const markerContainerOne = { top: -24, left: trackOneLength - 24 };
+    const markerContainerOne = { top: -45, left: trackOneLength - 24 };
 
-    const markerContainerTwo = { top: -24, right: trackThreeLength - 24 };
+    const markerContainerTwo = { top: -45, right: trackThreeLength - 24 };
 
     return (
       <View style={[styles.container, this.props.containerStyle]}>
@@ -396,7 +396,7 @@ const styles = StyleSheet.create({
   markerContainer: {
     position: 'absolute',
     width: 48,
-    height: 48,
+    height: 75,
     backgroundColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
