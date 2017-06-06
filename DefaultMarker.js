@@ -7,19 +7,18 @@ export default class DefaultMarker extends React.Component {
     pressed: PropTypes.bool,
     pressedMarkerStyle: View.propTypes.style,
     markerStyle: View.propTypes.style,
-    enabled: PropTypes.bool,
   };
 
   render() {
     return (
       <TouchableHighlight>
         <View
-          style={this.props.enabled ? [
+          style={[
             styles.markerStyle,
             this.props.markerStyle,
             this.props.pressed && styles.pressedMarkerStyle,
             this.props.pressed && this.props.pressedMarkerStyle,
-          ] : [styles.markerStyle, styles.disabled]}
+          ]}
         />
       </TouchableHighlight>
     );
@@ -61,8 +60,5 @@ const styles = StyleSheet.create({
         borderRadius: 20,
       },
     }),
-  },
-  disabled: {
-    backgroundColor: '#d3d3d3',
   },
 });
